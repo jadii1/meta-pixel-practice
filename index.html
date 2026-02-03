@@ -236,52 +236,63 @@
         });
     </script>
 
-    // -------- VIEW CONTENT ----------
-document.querySelectorAll(".view-product-btn").forEach(btn => {
-  btn.addEventListener('click', () => {
-    fbq('track', 'ViewContent');
-  });
-});
-
-// -------- ADD TO CART ----------
-document.querySelectorAll(".add-to-cart-btn").forEach(btn => {
-  btn.addEventListener('click', () => {
-    fbq('track', 'AddToCart', {
-      content_name: btn.dataset.productName,
-      value: btn.dataset.productPrice,
-      currency: 'USD'
+    <script>
+  // ---------- VIEW CONTENT ----------
+  document.querySelectorAll('.view-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      fbq('track', 'ViewContent');
+      console.log('ViewContent fired');
     });
   });
-});
 
-// -------- INITIATE CHECKOUT ----------
-document.getElementById('checkout-btn')?.addEventListener('click', () => {
-  fbq('track', 'InitiateCheckout');
-});
-
-// -------- ADD PAYMENT INFO ----------
-document.getElementById('proceed-btn')?.addEventListener('click', () => {
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  fbq('track', 'AddPaymentInfo', {
-    content_name: name,
-    content_email: email,
-    value: cartTotal,
-    currency: 'USD'
+  // ---------- ADD TO CART ----------
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      fbq('track', 'AddToCart', {
+        currency: 'USD',
+        value: parseFloat(btn.closest('.product-card').dataset.price)
+      });
+      console.log('AddToCart fired');
+    });
   });
-});
 
-// -------- PURCHASE ----------
-document.getElementById('complete-btn')?.addEventListener('click', () => {
-  fbq('track', 'Purchase', {
-    value: cartTotal,
-    currency: 'USD'
+  // ---------- INITIATE CHECKOUT ----------
+  document.getElementById('checkout-btn').addEventListener('click', () => {
+    fbq('track', 'InitiateCheckout', {
+      currency: 'USD',
+      value: cart.reduce((acc, item) => acc + item.price * item.qty, 0)
+    });
+    console.log('InitiateCheckout fired');
   });
-});
+
+  // ---------- ADD PAYMENT INFO ----------
+  document.getElementById('proceed-btn').addEventListener('click', () => {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    fbq('track', 'AddPaymentInfo', {
+      currency: 'USD',
+      value: cart.reduce((acc, item) => acc + item.price * item.qty, 0),
+      content_name: name,
+      content_email: email
+    });
+    console.log('AddPaymentInfo fired');
+  });
+
+  // ---------- PURCHASE ----------
+  document.getElementById('complete-btn').addEventListener('click', () => {
+    fbq('track', 'Purchase', {
+      currency: 'USD',
+      value: cart.reduce((acc, item) => acc + item.price * item.qty, 0)
+    });
+    console.log('Purchase fired');
+  });
+</script>
+
 
     
 </body>
 </html>
+
 
 
 
