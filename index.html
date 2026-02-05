@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,425 +15,101 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '917455760640241');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=917455760640241&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Coffee Store ☕</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9f5f0;
-            color: #5c3d2e;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            min-height: 90vh;
-        }
-        
-        header {
-            background-color: #4e342e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        header h1 {
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        
-        nav {
-            background-color: #6d4c41;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        
-        nav button {
-            background-color: transparent;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-        
-        nav button:hover {
-            background-color: rgba(255,255,255,0.1);
-        }
-        
-        main {
-            padding: 30px;
-            min-height: 400px;
-        }
-        
-        .page {
-            display: none;
-        }
-        
-        .page.active {
-            display: block;
-        }
-        
-        .page-title {
-            color: #5c3d2e;
-            border-bottom: 2px solid #d7ccc8;
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-        }
-        
-        .btn {
-            background-color: #8d6e63;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: background-color 0.3s;
-            margin-top: 15px;
-            display: inline-block;
-            text-decoration: none;
-        }
-        
-        .btn:hover {
-            background-color: #6d4c41;
-        }
-        
-        .btn-large {
-            padding: 15px 30px;
-            font-size: 18px;
-        }
-        
-        .home-content {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .home-content h2 {
-            margin-bottom: 20px;
-            color: #5c3d2e;
-        }
-        
-        .home-content p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-size: 18px;
-            color: #795548;
-        }
-        
-        .product-container {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-        }
-        
-        .product-image {
-            width: 300px;
-            height: 300px;
-            background-color: #d7ccc8;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 60px;
-        }
-        
-        .product-details {
-            flex: 1;
-        }
-        
-        .product-details h3 {
-            margin-bottom: 15px;
-            color: #5c3d2e;
-        }
-        
-        .price {
-            font-size: 28px;
-            font-weight: bold;
-            color: #8d6e63;
-            margin: 15px 0;
-        }
-        
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #d7ccc8;
-        }
-        
-        .cart-item:last-child {
-            border-bottom: none;
-        }
-        
-        .cart-total {
-            text-align: right;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #d7ccc8;
-        }
-        
-        .checkout-form {
-            max-width: 500px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #5c3d2e;
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d7ccc8;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        
-        .thank-you {
-            text-align: center;
-            padding: 60px 20px;
-        }
-        
-        .thank-you h2 {
-            color: #5c3d2e;
-            margin-bottom: 20px;
-        }
-        
-        .thank-you p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #795548;
-        }
-        
-        .success-icon {
-            font-size: 60px;
-            color: #4caf50;
-            margin-bottom: 20px;
-        }
-        
-        .order-summary {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
-            max-width: 400px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #795548;
-            border-top: 1px solid #d7ccc8;
-            margin-top: 30px;
-        }
-        
-        @media (max-width: 768px) {
-            .product-container {
-                flex-direction: column;
-            }
-            
-            .product-image {
-                width: 100%;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Online Coffee Store</title>
+
+<style>
+.page{display:none;}
+.page.active{display:block;}
+</style>
+
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>☕ Online Coffee Store</h1>
-            <p>Specialty coffee delivered to your door</p>
-        </header>
-        
-        <nav>
-            <button onclick="showPage('home')">Home</button>
-            <button onclick="showPage('products')">Products</button>
-            <button onclick="showPage('cart')">Cart</button>
-        </nav>
-        
-        <main>
-            <!-- Home Page -->
-            <div id="home" class="page active">
-                <div class="home-content">
-                    <h2>Welcome to Our Coffee Store</h2>
-                    <p>Discover our premium selection of specialty coffees sourced from the finest regions around the world. Every cup tells a story.</p>
-                    <button class="btn btn-large" onclick="showPage('products')">View Coffee</button>
-                </div>
-            </div>
-            
-            <!-- Products Page -->
-            <div id="products" class="page">
-                <h2 class="page-title">Our Premium Coffee</h2>
-                <div class="product-container">
-                    <div class="product-image">☕</div>
-                    <div class="product-details">
-                        <h3>Ethiopian Yirgacheffe</h3>
-                        <p>A beautifully balanced coffee with floral aromas, bright citrus notes, and a smooth, tea-like body. Grown in the high altitudes of Ethiopia's Yirgacheffe region, this coffee is hand-picked and sun-dried for exceptional quality.</p>
-                        <p><strong>Roast:</strong> Light-Medium</p>
-                        <p><strong>Tasting Notes:</strong> Lemon, Jasmine, Bergamot</p>
-                        <div class="price">$18.99 / 12oz</div>
-                        <button class="btn" onclick="addToCart(); showPage('cart')">Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Cart Page -->
-            <div id="cart" class="page">
-                <h2 class="page-title">Your Shopping Cart</h2>
-                <div id="cart-items">
-                    <div class="cart-item">
-                        <div>
-                            <strong>Ethiopian Yirgacheffe</strong>
-                            <p>12oz bag - Light-Medium Roast</p>
-                        </div>
-                        <div>
-                            <span>$18.99</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cart-total">
-                    <p>Total: $18.99</p>
-                </div>
-                <button class="btn" onclick="showPage('checkout')">Proceed to Checkout</button>
-            </div>
-            
-            <!-- Checkout Page -->
-            <div id="checkout" class="page">
-                <h2 class="page-title">Checkout</h2>
-                <div class="checkout-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Shipping Address</label>
-                        <input type="text" id="address" placeholder="Enter your shipping address">
-                    </div>
-                    <div class="form-group">
-                        <label for="payment">Payment Method</label>
-                        <input type="text" id="payment" placeholder="Credit card details">
-                    </div>
-                    <button class="btn" onclick="completeOrder(); showPage('thankyou')">Complete Order</button>
-                </div>
-            </div>
-            
-            <!-- Thank You Page -->
-            <div id="thankyou" class="page">
-                <div class="thank-you">
-                    <div class="success-icon">✓</div>
-                    <h2>Order Successful!</h2>
-                    <p>Thank you for your purchase. Your order has been confirmed and will be shipped within 2-3 business days.</p>
-                    <p>An email confirmation has been sent to your registered email address.</p>
-                    
-                    <div class="order-summary">
-                        <h3>Order Summary</h3>
-                        <p><strong>Item:</strong> Ethiopian Yirgacheffe</p>
-                        <p><strong>Total:</strong> $18.99</p>
-                        <p><strong>Order #:</strong> COFFEE-2023-001</p>
-                    </div>
-                    
-                    <button class="btn" onclick="showPage('home')">Return to Home</button>
-                </div>
-            </div>
-        </main>
-        
-        <footer>
-            <p>© 2023 Online Coffee Store. All rights reserved.</p>
-        </footer>
-    </div>
 
-    <script>
-        // Function to show specific page and hide others
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show the requested page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Track page view for analytics (simulated)
-            console.log(`Page viewed: ${pageId}`);
-        }
-        
-        // Function to add item to cart
-        function addToCart() {
-            alert('Ethiopian Yirgacheffe added to cart!');
-            // Track add to cart event for analytics (simulated)
-            console.log('Event: Add to Cart - Product: Ethiopian Yirgacheffe, Price: $18.99');
-        }
-        
-        // Function to complete order
-        function completeOrder() {
-            // Get form values
-            const name = document.getElementById('name').value || 'Customer';
-            const email = document.getElementById('email').value || 'customer@example.com';
-            
-            alert(`Thank you ${name}! Your order has been placed. Confirmation sent to ${email}`);
-            
-            // Track purchase event for analytics (simulated)
-            console.log(`Event: Purchase Complete - Customer: ${name}, Email: ${email}, Amount: $18.99`);
-        }
-        
-        // Initialize cart on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Start on home page
-            showPage('home');
-            
-            // Pre-fill checkout form with sample data for testing
-            document.getElementById('name').value = 'John Doe';
-            document.getElementById('email').value = 'john@example.com';
-            document.getElementById('address').value = '123 Coffee Street, Seattle, WA';
-            document.getElementById('payment').value = 'Visa **** 1234';
-        });
-    </script>
+<body>
+
+<div id="home" class="page active">
+<h1>Home</h1>
+<button onclick="showPage('products')">View Coffee</button>
+</div>
+
+<div id="products" class="page">
+<h1>Product</h1>
+<p>Ethiopian Yirgacheffe - $18.99</p>
+<button onclick="addToCart(); showPage('cart')">Add to Cart</button>
+</div>
+
+<div id="cart" class="page">
+<h1>Cart</h1>
+<button onclick="showPage('checkout')">Proceed to Checkout</button>
+</div>
+
+<div id="checkout" class="page">
+<h1>Checkout</h1>
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<button onclick="completeOrder(); showPage('thankyou')">Complete Order</button>
+</div>
+
+<div id="thankyou" class="page">
+<h1>Order Successful</h1>
+<button onclick="showPage('home')">Home</button>
+</div>
+
+<script>
+
+function showPage(pageId){
+
+document.querySelectorAll('.page').forEach(p=>{
+p.classList.remove('active');
+});
+
+document.getElementById(pageId).classList.add('active');
+
+
+// ====== STANDARD EVENTS ======
+
+if(pageId === "products"){
+fbq('track','ViewContent',{
+content_name:"Ethiopian Yirgacheffe",
+value:18.99,
+currency:"USD"
+});
+}
+
+if(pageId === "checkout"){
+fbq('track','InitiateCheckout',{
+value:18.99,
+currency:"USD"
+});
+}
+
+if(pageId === "thankyou"){
+fbq('track','Purchase',{
+value:18.99,
+currency:"USD"
+});
+}
+
+}
+
+function addToCart(){
+
+alert("Added to Cart");
+
+fbq('track','AddToCart',{
+content_name:"Ethiopian Yirgacheffe",
+value:18.99,
+currency:"USD"
+});
+
+}
+
+function completeOrder(){
+alert("Order Completed");
+}
+
+</script>
+
 </body>
 </html>
-
